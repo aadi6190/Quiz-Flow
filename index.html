@@ -5,40 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quiz Flow Project by OyeBusy</title>
   <style>
+    /* CSS styles */
     body {
       font-family: Arial, sans-serif;
-      height: 100vh;
-      margin: 0;
     }
+
     .heading {
-        display: flex;
-      margin-left: 20.5rem;
+      text-align: center;
+      margin-top: 20px;
     }
-.name{
-    float: right;
-    margin-left: 12rem;
-    font-size: small;
-    margin-top: 1.8rem;
-}
+
     .quiz-container {
       display: flex;
-      margin-top: 2rem;
       flex-direction: column;
       align-items: center;
+      margin-top: 20px;
     }
 
     .row {
       display: flex;
+      justify-content: center;
       margin-bottom: 20px;
-      gap: 2rem;
     }
 
     .box {
       width: 220px;
-      height: 200px;
+      height: 300px;
       margin: 5px;
-      background-color: rgb(233, 232, 232);
-      border: 2px solid #e0dcdc;
+      background-color: #f0f0f0;
+      border: 2px solid #ccc;
       border-radius: 5px;
       display: flex;
       flex-direction: column;
@@ -50,81 +45,30 @@
 
     .radio {
       position: absolute;
-      top: 3px;
-      right: 195px;
+      top: 10px;
+      right: 10px;
       width: 20px;
       height: 20px;
-      background-color: lightgray;
-      border: 1px solid #959191;
-      border-radius: 2px;
+      background-color: #ddd;
+      border: 1px solid #999;
+      border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
     }
 
     .image {
-       /* margin-bottom: 1rem; */
-      max-width: 240px;
-      max-height: 120px;
-     
-     
-    }
-    span{
-        align-items: center;
-        justify-content: center;
-        margin-top: 10px;
-        margin-left:15px;
-        margin-right: 15px;
-        margin-bottom: 15px;
-        font-size: 15px;
+      max-width: 200px;
+      max-height: 200px;
+      margin-bottom: 10px;
     }
 
-    input[type="radio"] {
+    .result-container {
       display: none;
-    }
-
-    input[type="radio"]:checked + .radio {
-      background-color: #dd5c5c;
-      border-color: #080808;
-      color: white;
-    }
-    @media only screen and (max-width: 600px) {
-    body {
-      font-size: 14px;
-    }
-
-    .heading {
-      margin-left: 1rem;
-    }
-
-    .quiz-container {
-      margin-top: 1rem;
-    }
-
-    .row {
       flex-direction: column;
-      gap: 1rem;
+      align-items: center;
+      margin-top: 20px;
     }
-
-    .box {
-      width: 100%;
-    }
-
-    .radio {
-      position: absolute;
-      top: 5px;
-      right: 5px;
-    }
-
-    .image {
-      max-width: 100%;
-      max-height: auto;
-    }
-
-    span {
-      font-size: 12px;
-    }
-  }
   </style>
 </head>
 <body>
@@ -133,55 +77,131 @@
   <h2>How do you want your home to feel?</h2>
   <div class="name">Made by Aadesh Singh</div>
 </div>
-.
 
 <div class="quiz-container">
   <div class="row" id="row1">
+    <!-- Option 1 -->
     <label class="box" for="option1">
       <input type="radio" id="option1" name="row1" />
       <div class="radio"></div>
-      <div class="image"><img class="image" src="https://www.decorpot.com/images/blogimage234172541urban-minimalism.jpg" alt="Image Description 1"></div>
+      <img class="image" src="https://www.decorpot.com/images/blogimage234172541urban-minimalism.jpg" alt="Image Description 1">
       <span>Welcoming... A place you can go to barefoot.</span>
     </label>
 
+    <!-- Option 2 -->
     <label class="box" for="option2">
       <input type="radio" id="option2" name="row1" />
       <div class="radio"></div>
       <img class="image" src="https://www.decorpot.com/images/blogimage1335103980blacked-out-living-room.jpg" alt="Image Description 2" >
-      <span>StreamLined... Like everything has a place</span>
+      <span>Streamlined... Like everything has a place.</span>
     </label>
 
+    <!-- Option 3 -->
     <label class="box" for="option3">
       <input type="radio" id="option3" name="row1" />
       <div class="radio"></div>
       <img class="image" src="https://www.decorpot.com/images/blogimage1718767042blue-and-white-color-for-living-room.jpg" alt="Image Description 3">
-      <span>Unique... I want Visitors to feel like history of story </span>
+      <span>Unique... I want visitors to feel like history or story.</span>
     </label>
   </div>
 
   <div class="row" id="row2">
+    <!-- Option 4 -->
     <label class="box" for="option4">
       <input type="radio" id="option4" name="row2" />
       <div class="radio"></div>
       <img class="image" src="https://www.decorpot.com/images/blogimage449851464living-room-archways.jpg" alt="Image Description 4">
-      <span>Cool...A mix of contemporary and retro.</span>
+      <span>Cool... A mix of contemporary and retro.</span>
     </label>
 
+    <!-- Option 5 -->
     <label class="box" for="option5">
       <input type="radio" id="option5" name="row2" />
       <div class="radio"></div>
       <img class="image" src="https://www.decorpot.com/images/blogimage428229898foyer-furniture-ideas.jpg" alt="Image Description 5">
-      <span>Laid back...  Open Feels like Fresh. </span>
+      <span>Laid back... Feels open, fresh.</span>
     </label>
 
+    <!-- Option 6 -->
     <label class="box" for="option6">
       <input type="radio" id="option6" name="row2" />
       <div class="radio"></div>
       <img class="image" src="https://www.decorpot.com/images/blogimage260413356cosy-seating-ideas-for-a-small-foyer.jpg" alt="Image Description 6">
-      <span>Relaxing.. A weekend at the lake. </span>
+      <span>Relaxing... Like a weekend at the lake.</span>
     </label>
   </div>
+
+  <!-- Submit Button -->
+  <button id="submit-quiz">Submit</button>
+
+  <!-- Quiz Results Section -->
+  <div class="result-container" id="quiz-results">
+    <h3>Your Quiz Results</h3>
+    <p id="result-description">Based on your choices, your ideal home atmosphere is...</p>
+    <img id="result-image" src="" alt="Quiz Result Image">
+    <button id="restart-quiz">Restart Quiz</button>
+  </div>
 </div>
+
+<script>
+  // JavaScript code for quiz functionality
+  const submitButton = document.getElementById('submit-quiz');
+  const restartButton = document.getElementById('restart-quiz');
+  const quizResults = document.getElementById('quiz-results');
+  const resultDescription = document.getElementById('result-description');
+  const resultImage = document.getElementById('result-image');
+
+  submitButton.addEventListener('click', showResults);
+  restartButton.addEventListener('click', restartQuiz);
+
+  function showResults() {
+    // Logic to determine quiz results based on selected options
+    const selectedOptions = document.querySelectorAll('input[type="radio"]:checked');
+    if (selectedOptions.length !== 2) {
+      alert('Please select one option from each row.');
+      return;
+    }
+
+    let resultDescriptionText = '';
+    let resultImageUrl = '';
+
+    // Determine quiz result based on selected options
+    const selectedOption1 = selectedOptions[0].id;
+    const selectedOption2 = selectedOptions[1].id;
+
+    // Example logic (customize as needed)
+    if (selectedOption1 === 'option1' && selectedOption2 === 'option4') {
+      resultDescriptionText = "Your ideal home atmosphere is Welcoming and Cool.";
+      resultImageUrl = "https://example.com/result-image.jpg";
+    } else if (selectedOption1 === 'option2' && selectedOption2 === 'option5') {
+      resultDescriptionText = "Your ideal home atmosphere is Streamlined and Laid back.";
+      resultImageUrl = "https://example.com/result-image.jpg";
+    } else {
+      resultDescriptionText = "Your ideal home atmosphere is Unique and Relaxing.";
+      resultImageUrl = "https://example.com/result-image.jpg";
+    }
+
+    // Update result description and image
+    resultDescription.textContent = resultDescriptionText;
+    resultImage.src = resultImageUrl;
+
+    // Show quiz results section
+    quizResults.style.display = 'flex';
+  }
+
+  function restartQuiz() {
+    // Hide quiz results section and reset selected options
+    quizResults.style.display = 'none';
+    resultDescription.textContent = '';
+    resultImage.src = '';
+
+    // Clear selected options
+    const selectedOptions = document.querySelectorAll('input[type="radio"]:checked');
+    selectedOptions.forEach(option => {
+      option.checked = false;
+    });
+  }
+</script>
 
 </body>
 </html>
